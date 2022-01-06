@@ -6,7 +6,9 @@ cc_library(
     includes = ["."],
     linkopts = [
       "-lzmq",
+      "-L/usr/local/opt/zeromq/lib",
     ],
+    deps = [
+      "@cppzmq",
+    ]
 )
-
-

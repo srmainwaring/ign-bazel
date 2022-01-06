@@ -2,10 +2,11 @@ package(default_visibility = ["//visibility:public"])
 
 cc_library(
     name = "json",
-    includes = ["."],
     hdrs = glob(["json/*.h"]),
+    includes = ["."],
     linkopts = [
       "-ljsoncpp",
+      "-L/usr/local/opt/jsoncpp/lib",
     ],
 )
 

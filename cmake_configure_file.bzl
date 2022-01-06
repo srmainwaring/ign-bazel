@@ -40,7 +40,7 @@ _cmake_configure_file_gen = rule(
         "cmake_configure_file_py": attr.label(
             cfg = "host",
             executable = True,
-            default = Label("@ign_bazel//:cmake_configure_file"),
+            default = Label("//ign_bazel:cmake_configure_file"),
         ),
         "env": attr.string_dict(
             mandatory = True,

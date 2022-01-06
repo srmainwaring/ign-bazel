@@ -6,6 +6,7 @@ cc_library(
     includes = ["."],
     linkopts = [
       "-lsqlite3",
+      "-L/usr/local/opt/sqlite3/lib",
     ],
 )
 

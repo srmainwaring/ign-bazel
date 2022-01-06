@@ -2,16 +2,24 @@ package(default_visibility = ["//visibility:public"])
 
 cc_library(
     name = "glib",
-    hdrs = glob(["include/glib-2.0/**"]) + 
-      ["lib/x86_64-linux-gnu/glib-2.0/include/glibconfig.h"],
+    srcs = glob([
+      "include/glib-2.0/gio/**",
+      "include/glib-2.0/glib/**",
+      "include/glib-2.0/gobject/**",
+    ]),
+    hdrs = glob([
+      "include/glib-2.0/*.h",
+      "lib/glib-2.0/include/*.h",
+    ]),
     includes = [
-      "include/glib-2.0/", 
-      "lib/x86_64-linux-gnu/glib-2.0/include/"
+      "include/glib-2.0",
+      "lib/glib-2.0/include",
     ],
     linkopts = [
         "-lglib-2.0",
         "-lgobject-2.0",
         "-lgio-2.0",
         "-lgthread-2.0",
+        "-L/usr/local/opt/glib/lib",
     ],
 )
