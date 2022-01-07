@@ -135,6 +135,5 @@ new_git_repository(
     name = "ign-msgs9",
     commit = "6da277056e867e8b60c0b48ff88df9b3c5a49c9a", # Latest (2022-01-01)
     remote = "https://github.com/ignitionrobotics/ign-msgs.git",
-    strip_prefix = "proto",
     build_file = "//:ign-msgs9.BUILD"
 )
