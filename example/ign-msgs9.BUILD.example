@@ -604,3 +604,35 @@ python_proto_library(
   output_mode = "NO_PREFIX",
   visibility = ["//visibility:public"],
 )
+
+
+#———————————————————————————————————————————————————————————————————————
+# stringmsg.proto
+proto_library(
+  name = "stringmsg_proto",
+  srcs = ["proto/ignition/msgs/stringmsg.proto"],
+  deps = [
+    ":header_proto",
+  ],
+  strip_import_prefix = "proto",
+  visibility = ["//visibility:public"],
+)
+
+cpp_proto_library(
+  name = "stringmsg_cc_proto",
+  protos = [":stringmsg_proto"],
+  deps = [
+    ":header_cc_proto",
+  ],
+  visibility = ["//visibility:public"],
+)
+
+python_proto_library(
+  name = "stringmsg_py_pb2",
+  protos = [":stringmsg_proto"],
+  deps = [
+    ":header_py_pb2",
+  ],
+  output_mode = "NO_PREFIX",
+  visibility = ["//visibility:public"],
+)
