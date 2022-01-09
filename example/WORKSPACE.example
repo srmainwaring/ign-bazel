@@ -140,13 +140,18 @@ bind(
 )
 
 #———————————————————————————————————————————————————————————————————————
-# `ign-msgs9`
+# `ign-msgs9`:
+# 
+# match version used in ign-bazel: branch bazel-macos/ign-msgs9
+# 
 # https://stackoverflow.com/questions/50592846/pull-github-repository-using-bazel
 # strip the `proto` prefix so that generated protobuf bindings for ignition-msgs
 # have the correct include path which is `ignition.msgs`
+
+# change to match version used in ign-bazel: branch bazel-macos/ign-msgs9
 new_git_repository(
     name = "ign-msgs9",
-    commit = "6da277056e867e8b60c0b48ff88df9b3c5a49c9a", # Latest (2022-01-01)
-    remote = "https://github.com/ignitionrobotics/ign-msgs.git",
+    commit = "1cb614f6ea7e93538c07d3a04f3e018d9581449e", # ign-msgs9
+    remote = "https://github.com/srmainwaring/ign-msgs.git",
     build_file = "//:ign-msgs9.BUILD"
 )

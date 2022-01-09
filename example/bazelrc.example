@@ -3,4 +3,8 @@ build --define enable_ifaddrs=true
 build --test_env=DISPLAY
 test --define enable_ifaddrs=true
 test --test_env=DISPLAY
-#build --compilation_mode=dbg
+
+# Debugging C++ on MacOS does not work (workarounds)
+# https://github.com/bazelbuild/bazel/issues/6327
+build --compilation_mode=dbg
+build --spawn_strategy=standalone
