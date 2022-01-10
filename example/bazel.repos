@@ -74,4 +74,4 @@ repositories:
   python_ignition:
     type: git
     url: https://github.com/srmainwaring/python-ignition
-    version: bazel-macos/python-ignition
+    version: main
